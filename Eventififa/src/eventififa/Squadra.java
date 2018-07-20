@@ -11,9 +11,33 @@ package eventififa;
  */
 public class Squadra {
     
-    public String Nome;
-    public String Palmares;
-    public String Continentenativo;  
+    private String Nome;
+    private String Palmares;
+    private String Continentenativo;  
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String Nome) {
+        this.Nome = Nome;
+    }
+
+    public String getPalmares() {
+        return Palmares;
+    }
+
+    public void setPalmares(String Palmares) {
+        this.Palmares = Palmares;
+    }
+
+    public String getContinentenativo() {
+        return Continentenativo;
+    }
+
+    public void setContinentenativo(String Continentenativo) {
+        this.Continentenativo = Continentenativo;
+    }
    
     
 }
