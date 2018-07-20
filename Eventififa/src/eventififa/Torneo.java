@@ -16,12 +16,19 @@ public class Torneo extends EventoFifa {
     private String dataInizio;
     private String dataFine;
     private int    numSquadre;
+    private Squadra[] partecipanti;
     
       
     
-    public Torneo( String nomeTorneo, String sedeTorneo,String dataInizio, String dataFine, int  numSquadre )
+    public Torneo( String nomeTorneo, String sedeTorneo,String dataInizio, String dataFine, int  numSquadre, Squadra... squadre )
     {
         super ("Infantino",1902,"hai vinto!!!");
+        
+        partecipanti = new Squadra[squadre.length];
+        for(int i=0; i<squadre.length;i++)
+        { 
+            partecipanti[i]=squadre[i];
+                }
         
         this.nomeTorneo=nomeTorneo;
         this.sedeTorneo=sedeTorneo;
@@ -29,6 +36,14 @@ public class Torneo extends EventoFifa {
         this.dataFine=dataFine;
         this.numSquadre=numSquadre;
     
+    }
+
+    public Squadra[] getPartecipanti() {
+        return partecipanti;
+    }
+
+    public void setPartecipanti(Squadra[] partecipanti) {
+        this.partecipanti = partecipanti;
     }
 
     public String getNomeTorneo() {
