@@ -94,6 +94,13 @@ public class Torneo extends Fifa implements CalendarEvent {
     public String getLocation() throws CalendarEventException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public String getDescription() {
+        
+        String description = "This is the manager of all the Fifa events";
+        return description;
+    }
     
     
 }
