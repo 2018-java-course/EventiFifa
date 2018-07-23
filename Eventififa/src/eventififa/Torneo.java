@@ -5,45 +5,29 @@
  */
 package eventififa;
 
-/**
- *
- * @author PC19
- */
-public class Torneo extends EventoFifa {
+
+import calendar.api.CalendarEvent;
+import calendar.api.CalendarEventException;
+import java.time.LocalDate;
+
+public class Torneo extends Fifa implements CalendarEvent {
     
     private String nomeTorneo;
     private String sedeTorneo;
     private String dataInizio;
     private String dataFine;
     private int    numSquadre;
-    private Squadra[] partecipanti;
     
       
     
-    public Torneo( String nomeTorneo, String sedeTorneo,String dataInizio, String dataFine, int  numSquadre, Squadra... squadre )
-    {
-        super ("Infantino",1902,"hai vinto!!!");
-        
-        partecipanti = new Squadra[squadre.length];
-        for(int i=0; i<squadre.length;i++)
-        { 
-            partecipanti[i]=squadre[i];
-                }
-        
-        this.nomeTorneo=nomeTorneo;
-        this.sedeTorneo=sedeTorneo;
-        this.dataInizio= dataInizio;
-        this.dataFine=dataFine;
-        this.numSquadre=numSquadre;
+    public Torneo( String nomeTorneo, String sedeTorneo,String dataInizio, String dataFine, int  numSquadre) {
+             
+        this.nomeTorneo = nomeTorneo;
+        this.sedeTorneo = sedeTorneo;
+        this.dataInizio = dataInizio;
+        this.dataFine = dataFine;
+        this.numSquadre = numSquadre;
     
-    }
-
-    public Squadra[] getPartecipanti() {
-        return partecipanti;
-    }
-
-    public void setPartecipanti(Squadra[] partecipanti) {
-        this.partecipanti = partecipanti;
     }
 
     public String getNomeTorneo() {
@@ -85,10 +69,31 @@ public class Torneo extends EventoFifa {
     public void setNumSquadre(int numSquadre) {
         this.numSquadre = numSquadre;
     }
+
+    @Override
+    public String getTitle() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public LocalDate getStartDate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public LocalDate getEndDate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getCategory() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getLocation() throws CalendarEventException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
-      
 }
-
-
-
